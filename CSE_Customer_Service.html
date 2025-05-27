@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Coze 智能客服</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>欢迎来到我的网页</h1>
+  <p>下面是智能客服聊天窗口：</p>
+
+  <!-- 引入 Coze Chat SDK -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/cn/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7507524220050882595'
+      },
+      componentProps: {
+        title: 'Coze Chat 客服'
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_XHlipHF8aMWV61ozGYuRODajW3GbGxUuuMQwTmZjtvjonwAkp4gYKgTuiyVOxsCj',
+        onRefreshToken: function () {
+          return 'pat_XHlipHF8aMWV61ozGYuRODajW3GbGxUuuMQwTmZjtvjonwAkp4gYKgTuiyVOxsCj';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
